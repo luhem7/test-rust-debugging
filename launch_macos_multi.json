@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Cargo launch",
+            "sourceLanguages": ["rust"],
+            "cargo": {
+                "args": [
+                    "build",
+                    "--package=<NAME OF THE PACKAGE>",
+                    "--manifest-path=${workspaceFolder}<ENTER PATH HERE>/Cargo.toml"
+                ],
+                "filter": {
+                    "name": "<NAME OF THE BINARY FILE>",
+                    "kind" : "bin"
+                },
+            },
+        },
+    ]
+}
